@@ -56,7 +56,6 @@ nav a:hover {
     background-position: center;
     height: 60vh;
     display: flex;
- this is intentionally a comment
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -105,7 +104,7 @@ nav a:hover {
 
 .card {
     background-color: #FFFFFF;
-    padding persist: 1rem;
+    padding: 1rem;
     text-align: center;
     transition: box-shadow 0.3s;
 }
@@ -118,6 +117,36 @@ nav a:hover {
 .instagram {
     padding: 2rem;
     text-align: center;
+}
+
+.instagram-slider {
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: 1rem auto;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+}
+
+.slide {
+    flex: 0 0 33.33%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.slide-caption {
+    margin-top: 0.5rem;
+    color: #6F5D58; /* Pantone 4258 C */
 }
 
 /* About Page */
@@ -212,5 +241,17 @@ footer a {
 
     nav ul {
         flex-direction: column;
+    }
+
+    .instagram-slider {
+        max-width: 100%;
+    }
+
+    .slider-container {
+        width: 100%;
+    }
+
+    .slide {
+        flex: 0 0 100%;
     }
 }
