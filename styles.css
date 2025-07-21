@@ -174,14 +174,15 @@ nav a:hover {
 
 .slider-container {
     display: flex;
-    transition: transform 0.5s ease;
     width: 100%;
+    transition: transform 0.1s linear; /* Smoother transition */
 }
 
 .slide {
     flex: 0 0 33.33%; /* Each slide takes 1/3 for 3 visible */
     box-sizing: border-box;
-    padding: 10px;
+    padding: 0; /* Remove padding to eliminate space */
+    margin: 0; /* Remove margin to eliminate space */
     max-width: 33.33%;
     min-width: 33.33%;
     transform: scale(0.5); /* Half size */
