@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     background-color: #D9C0A9; /* Pantone 2310 C */
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Helvetica", "Arial", sans-serif;
     color: #6F5D58; /* Pantone 4258 C */
     font-size: 16px;
     line-height: 1.6;
@@ -10,7 +10,8 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 700;
     color: #111;
 }
 
@@ -30,6 +31,8 @@ header {
 
 .logo {
     color: #FFFFFF;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 700;
     font-size: 1.5rem;
 }
 
@@ -42,6 +45,7 @@ nav ul {
 nav a {
     color: #FFFFFF;
     text-decoration: none;
+    font-family: "Helvetica", "Arial", sans-serif;
     transition: color 0.3s;
 }
 
@@ -74,6 +78,8 @@ nav a:hover {
     color: #FFFFFF;
     padding: 0.5rem 1rem;
     text-decoration: none;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 500;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
@@ -201,6 +207,7 @@ nav a:hover {
     padding: 0.5rem;
     border: 1px solid #6F5D58; /* Pantone 4258 C */
     border-radius: 5px;
+    font-family: "Helvetica", "Arial", sans-serif;
 }
 
 .contact button {
@@ -225,6 +232,7 @@ footer ul {
 footer a {
     color: #FFFFFF;
     text-decoration: none;
+    font-family: "Helvetica", "Arial", sans-serif;
 }
 
 /* Responsive Design */
