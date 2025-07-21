@@ -174,7 +174,7 @@ nav a:hover {
 
 .slider-container {
     display: flex;
-    transition: transform 0.1s linear;
+    transition: transform 0.3s linear;
     width: 100%;
 }
 
