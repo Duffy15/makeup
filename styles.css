@@ -56,6 +56,16 @@ nav a:hover {
     color: #D9C0A9; /* Pantone 2310 C as accent */
 }
 
+.social-icon {
+    font-size: 1.2rem; /* Slightly larger for visibility */
+    color: #FFFFFF;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #D9C0A9; /* Pantone 2310 C as accent */
+}
+
 /* Hero Section */
 .hero {
     background-image: url('images/hero.jpg');
@@ -71,7 +81,7 @@ nav a:hover {
 }
 
 .hero-content {
-    padding: 3rem; /* Retained padding for spacing */
+    padding: 3rem;
     max-width: 800px;
 }
 
@@ -309,6 +319,10 @@ footer a {
         font-size: 0.9rem;
     }
 
+    .social-icon {
+        font-size: 1.1rem; /* Adjusted for mobile */
+    }
+
     .grid, .gallery {
         grid-template-columns: 1fr;
     }
@@ -333,5 +347,9 @@ footer a {
 
     nav a {
         font-size: 0.85rem;
+    }
+
+    .social-icon {
+        font-size: 1rem; /* Further reduced for very small screens */
     }
 }
