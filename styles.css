@@ -31,9 +31,9 @@ header {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #FFFFFF;
+    height: 40px; /* Adjusted for typical logo size */
+    width: auto;
+    max-width: 200px; /* Prevents overflow on small screens */
 }
 
 nav ul {
@@ -57,7 +57,7 @@ nav a:hover {
 }
 
 .social-icon {
-    font-size: 1.2rem; /* Slightly larger for visibility */
+    font-size: 1.2rem;
     color: #FFFFFF;
     transition: color 0.3s;
 }
@@ -306,7 +306,8 @@ footer a {
     }
 
     .logo {
-        font-size: 1.5rem;
+        height: 30px; /* Reduced for mobile */
+        max-width: 150px;
     }
 
     nav ul {
@@ -320,7 +321,7 @@ footer a {
     }
 
     .social-icon {
-        font-size: 1.1rem; /* Adjusted for mobile */
+        font-size: 1.1rem;
     }
 
     .grid, .gallery {
@@ -350,6 +351,11 @@ footer a {
     }
 
     .social-icon {
-        font-size: 1rem; /* Further reduced for very small screens */
+        font-size: 1rem;
+    }
+
+    .logo {
+        height: 25px; /* Further reduced for very small screens */
+        max-width: 120px;
     }
 }
