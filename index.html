@@ -8,19 +8,24 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
             const $slider = $('.slider-container');
             const $slides = $('.slide');
+            const slideCount = $slides.length;
             const slideWidth = $slides.outerWidth();
+            const totalWidth = slideWidth * slideCount;
+
+            // Clone slides for infinite loop
+            $slider.append($slides.clone()).css('width', totalWidth * 2);
+
             let currentPosition = 0;
 
             function moveSlider() {
-                currentPosition -= slideWidth;
-                if (currentPosition <= -slideWidth * $slides.length) {
+                currentPosition -= 1; // Smooth scrolling speed
+                if (currentPosition <= -totalWidth) {
                     currentPosition = 0;
-                    $slider.css('transform', `translateX(${currentPosition}px)`);
                 }
                 $slider.css('transform', `translateX(${currentPosition}px)`);
                 requestAnimationFrame(moveSlider);
@@ -29,7 +34,6 @@
             // Start the infinite loop
             requestAnimationFrame(moveSlider);
         });
-    </script>
 </head>
 <body>
     <header>
