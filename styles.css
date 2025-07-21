@@ -169,28 +169,33 @@ nav a:hover {
     overflow: hidden;
     position: relative;
     max-width: 100%;
+    height: 300px; /* Fixed height to contain slides */
 }
 
 .slider-container {
     display: flex;
     transition: transform 0.5s ease;
-    width: 100%; /* Full width to accommodate all slides */
+    width: 100%;
 }
 
 .slide {
-    flex: 0 0 33.33%; /* Each slide takes 1/3 of the container for 3 visible */
+    flex: 0 0 33.33%; /* Each slide takes 1/3 for 3 visible */
     box-sizing: border-box;
     padding: 10px;
     max-width: 33.33%;
     min-width: 33.33%;
-    transform: scale(0.5); /* Reduce size to half */
-    transform-origin: 0 0; /* Scale from top-left to maintain layout */
+    transform: scale(0.5); /* Half size */
+    transform-origin: 0 0;
+    height: 100%; /* Full height of slider */
 }
 
 .slide blockquote {
     margin: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* About Page */
 .about {
