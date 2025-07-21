@@ -183,7 +183,7 @@ nav a:hover {
     flex: 0 0 auto;
     box-sizing: border-box;
     padding: 0;
-    margin: 0 10px; /* Small margin to separate slides without excessive space */
+    margin: 0 100px; /* Small margin to separate slides without excessive space */
     width: 300px; /* Fixed width for consistency */
     height: auto; /* Auto height to avoid cutting */
     vertical-align: top; /* Align to top */
