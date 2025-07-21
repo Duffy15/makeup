@@ -154,42 +154,42 @@ nav a:hover {
 
 /* Instagram Section */
 .instagram {
-    padding: 5rem 2rem;
-    background-color: #2D2D2D;
+    padding: 20px;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.instagram h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .instagram-slider {
     overflow: hidden;
-    width: 100%;
-    max-width: 1200px;
-    margin: 2rem auto;
+    position: relative;
+    max-width: 100%;
 }
 
 .slider-container {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 300%;
+    transition: transform 0.5s ease;
+    width: 300%; /* Adjusted for 3 slides visible */
 }
 
 .slide {
-    flex: 0 0 33.33%;
-    padding: 1rem;
-    text-align: center;
+    flex: 0 0 33.33%; /* 1/3 of the container width for 3 slides */
+    box-sizing: border-box;
+    padding: 10px;
+    max-width: 33.33%;
+    min-width: 33.33%;
 }
 
-.slide img {
+.slide blockquote {
+    margin: 0;
     width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
+    height: auto;
 }
-
-.slide-caption {
-    color: #D9C0A9; /* Pantone 2310 C */
-    margin-top: 1rem;
-}
-
 /* About Page */
 .about {
     padding: 5rem 2rem;
