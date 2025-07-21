@@ -56,15 +56,17 @@ nav a:hover {
     background-position: center;
     height: 60vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text within the content */
     color: #FFFFFF;
 }
 
 .hero-content {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 2rem;
+    width: 100%; /* Ensure it takes full width of the flex container */
+    max-width: 600px; /* Optional: Limit maximum width for better readability */
 }
 
 .cta-button {
