@@ -47,8 +47,8 @@ nav ul {
 nav a {
     color: #FFFFFF;
     text-decoration: none;
-    font-size: 0.95rem; /* Reduced from 1rem for better fit */
-    white-space: nowrap; /* Prevents text wrapping */
+    font-size: 0.95rem;
+    white-space: nowrap;
     transition: color 0.3s;
 }
 
@@ -71,8 +71,7 @@ nav a:hover {
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 3rem;
+    padding: 3rem; /* Retained padding for spacing */
     max-width: 800px;
 }
 
@@ -307,7 +306,7 @@ footer a {
     }
 
     nav a {
-        font-size: 0.9rem; /* Further reduced for mobile */
+        font-size: 0.9rem;
     }
 
     .grid, .gallery {
@@ -333,6 +332,6 @@ footer a {
     }
 
     nav a {
-        font-size: 0.85rem; /* Even smaller for very small screens */
+        font-size: 0.85rem;
     }
 }
