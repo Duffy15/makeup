@@ -174,15 +174,17 @@ nav a:hover {
 .slider-container {
     display: flex;
     transition: transform 0.5s ease;
-    width: 300%; /* Adjusted for 3 slides visible */
+    width: 100%; /* Full width to accommodate all slides */
 }
 
 .slide {
-    flex: 0 0 33.33%; /* 1/3 of the container width for 3 slides */
+    flex: 0 0 33.33%; /* Each slide takes 1/3 of the container for 3 visible */
     box-sizing: border-box;
     padding: 10px;
     max-width: 33.33%;
     min-width: 33.33%;
+    transform: scale(0.5); /* Reduce size to half */
+    transform-origin: 0 0; /* Scale from top-left to maintain layout */
 }
 
 .slide blockquote {
