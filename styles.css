@@ -112,13 +112,14 @@ nav a:hover {
     transition: all 0.3s ease;
     margin: 0 10px;
     border-radius: 0; /* Remove any rounding for uniform shape */
-    box-sizing: border-box; /* Ensure padding doesn't affect size */
-    padding: 0; /* Remove any default padding to maintain size */
+    box-sizing: border-box; /* Ensure padding and border don't affect size */
+    padding: 0; /* Remove any default padding */
+    border: 2px solid transparent; /* Reset border to avoid size impact */
 }
 
 .oferta {
     background-color: #D9C0A9;
-    color: Transparent no-repeat; /* Text transparent to show background behind */
+    color: transparent; /* Text transparent to show background behind */
     border: 2px solid #D9C0A9;
 }
 
@@ -129,8 +130,8 @@ nav a:hover {
 }
 
 .portfolio {
-    background-color: Transparent no-repeat;
-    color: #fff; /* Text transparent to show background behind */
+    background-color: transparent;
+    color: transparent; /* Text transparent to show background behind */
     border: 2px solid #fff;
 }
 
@@ -320,7 +321,17 @@ footer a {
         grid-template-columns: 1fr;
     }
 
-   
+    .instagram-slider {
+        max-width: 100%;
+    }
+
+    .slider-container {
+        width: 100%;
+    }
+
+    .slide {
+        flex: 0 0 100%;
+    }
 }
 
 @media (max-width: 480px) {
