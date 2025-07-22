@@ -129,13 +129,13 @@ nav a:hover {
     border-color: #000;
 }
 
-.portfolio {
+.portfolio1 {
     background-color: transparent; /* Transparent to show hero.jpg background */
     color: #fff; /* White text by default */
     border: 2px solid #fff;
 }
 
-.portfolio:hover {
+.portfolio1:hover {
     background-color: #fff;
     color: #000; /* Text becomes visible on hover */
 }
