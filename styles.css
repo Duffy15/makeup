@@ -114,8 +114,8 @@ nav a:hover {
 }
 
 .oferta {
-    background-color: #000;
-    color: #D9C0A9;
+    background-color: #D9C0A9;
+    color: transparent;
     border: 2px solid #000;
 }
 
@@ -128,7 +128,7 @@ nav a:hover {
 .portfolio {
     background-color: transparent;
     color: #fff;
-    border: 2px solid #000;
+    border: 2px solid #fff;
     background-clip: padding-box; /* Ensures transparency inside */
 }
 
