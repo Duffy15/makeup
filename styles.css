@@ -104,17 +104,20 @@ nav a:hover {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     text-decoration: none;
-    padding: 1rem 2rem;
-    margin: 0 10px;
+    width: 150px; /* Fixed width for both buttons */
+    height: 50px; /* Fixed height for both buttons */
     display: inline-block;
+    line-height: 50px; /* Center text vertically */
+    text-align: center;
     transition: all 0.3s ease;
+    margin: 0 10px;
 }
 
 .oferta {
     background-color: #000;
     color: #fff;
     border: 2px solid #000;
-    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); /* Edgy shape */
+    clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 25%, calc(100% - 10px) 50%, 100% 75%, calc(100% - 10px) 100%, 10px 100%, 0 75%, 10px 50%, 0 25%); /* Sharp pointed rectangle */
 }
 
 .oferta:hover {
@@ -127,6 +130,7 @@ nav a:hover {
     background-color: transparent;
     color: #fff;
     border: 2px solid #fff;
+    background-clip: padding-box; /* Ensures transparency inside */
 }
 
 .portfolio:hover {
