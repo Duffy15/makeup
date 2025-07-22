@@ -111,29 +111,30 @@ nav a:hover {
     text-align: center;
     transition: all 0.3s ease;
     margin: 0 10px;
+    border-radius: 0; /* Remove any rounding for uniform shape */
 }
 
 .oferta {
-    color: transparent;
     background-color: #D9C0A9;
-    border: 2px solid #000;
+    color: transparent; /* Text transparent to show background */
+    border: 2px solid #D9C0A9;
 }
 
 .oferta:hover {
     background-color: #fff;
-    color: #000;
+    color: #000; /* Text becomes visible on hover */
     border-color: #000;
 }
 
 .portfolio {
     background-color: transparent;
-    color: #fff;
+    color: transparent; /* Text transparent to show background */
     border: 2px solid #fff;
 }
 
 .portfolio:hover {
     background-color: #fff;
-    color: #000;
+    color: #000; /* Text becomes visible on hover */
 }
 
 /* Intro Section */
@@ -178,7 +179,6 @@ nav a:hover {
     width: 100%;
     border-radius: 10px;
 }
-
 
 /* About Page */
 .about {
