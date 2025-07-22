@@ -320,17 +320,7 @@ footer a {
         grid-template-columns: 1fr;
     }
 
-    .instagram-slider {
-        max-width: 100%;
-    }
-
-    .slider-container {
-        width: 100%;
-    }
-
-    .slide {
-        flex: 0 0 100%;
-    }
+   
 }
 
 @media (max-width: 480px) {
