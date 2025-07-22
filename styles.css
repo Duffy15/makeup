@@ -128,7 +128,7 @@ nav a:hover {
 .portfolio {
     background-color: transparent;
     color: #fff;
-    border: 2px solid #fff;
+    border: 2px solid #000;
     background-clip: padding-box; /* Ensures transparency inside */
 }
 
@@ -180,49 +180,6 @@ nav a:hover {
     border-radius: 10px;
 }
 
-/* Instagram Section */
-.instagram {
-    padding: 20px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.instagram h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.instagram-slider {
-    overflow: hidden;
-    position: relative;
-    max-width: 100%;
-    white-space: nowrap; /* Prevent line breaks */
-}
-
-.slider-container {
-    display: flex;
-    transition: transform 0.3s linear;
-    width: 100%;
-}
-
-.slide {
-    display: inline-block; /* Changed to inline-block for better spacing control */
-    flex: 0 0 auto;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0 15px; /* Small margin to separate slides without excessive space */
-    width: 300px; /* Fixed width for consistency */
-    height: auto; /* Auto height to avoid cutting */
-    vertical-align: top; /* Align to top */
-}
-
-.slide blockquote {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-}
 
 /* About Page */
 .about {
