@@ -113,6 +113,7 @@ nav a:hover {
     margin: 0 10px;
     border-radius: 0; /* Remove any rounding for uniform shape */
     box-sizing: border-box; /* Ensure padding doesn't affect size */
+    padding: 0; /* Remove any default padding to maintain size */
 }
 
 .oferta {
