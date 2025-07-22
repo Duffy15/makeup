@@ -118,7 +118,7 @@ nav a:hover {
 }
 
 .oferta {
-    background-color: transparent !important; /* Force transparent background to show hero.jpg */
+    background-color: #D9C0A9 !important; /* Force transparent background to show hero.jpg */
     color: transparent !important; /* Force text to show hero.jpg background beneath */
     border: 2px solid #D9C0A9;
 }
