@@ -90,7 +90,7 @@ nav a:hover {
 .hero-content h1 {
     font-family: 'Raleway', Sans-serif; /* Changed font */
     font-size: 2.8rem; /* Slightly smaller */
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
 }
 
 .hero-content p {
