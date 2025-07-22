@@ -104,8 +104,8 @@ nav a:hover {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     text-decoration: none;
-    width: 150px; /* Fixed width for both buttons */
-    height: 50px; /* Fixed height for both buttons */
+    width: 150px !important; /* Force fixed width */
+    height: 50px !important; /* Force fixed height */
     display: inline-block;
     line-height: 50px; /* Center text vertically */
     text-align: center;
@@ -113,7 +113,7 @@ nav a:hover {
     margin: 0 10px;
     border-radius: 0; /* Remove any rounding for uniform shape */
     box-sizing: border-box; /* Ensure padding and border don't affect size */
-    padding: 0; /* Remove any default padding */
+    padding: 0 !important; /* Remove any padding */
     border: 2px solid transparent; /* Reset border to avoid size impact */
 }
 
