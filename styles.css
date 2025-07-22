@@ -119,12 +119,12 @@ nav a:hover {
 
 .oferta {
     color: transparent !important; 
-    background-color: #D9C0A9 !important;
+    background-color: #D9C0A9;
     border: 2px solid #D9C0A9;
 }
 
 .oferta:hover {
-    background-color: #fff;
+    background-color: #000;
     color: #000; /* Text becomes visible on hover */
     border-color: #000;
 }
@@ -136,8 +136,8 @@ nav a:hover {
 }
 
 .portfolio1:hover {
-    background-color: #fff;
-    color: #000; /* Text becomes visible on hover */
+    background-color: #000;
+    color: #fff; /* Text becomes visible on hover */
 }
 
 /* Intro Section */
