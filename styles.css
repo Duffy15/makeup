@@ -73,31 +73,35 @@ nav a:hover {
     background-position: center;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align content to the left */
     align-items: center;
-    text-align: center;
+    text-align: left; /* Align text to the left */
     position: relative;
     margin-top: 0;
 }
 
 .hero-content {
-    padding: 3rem;
+    padding: 3rem 5rem 3rem 2rem; /* Increased left padding to shift content left */
     max-width: 800px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-family: 'Playfair Display', sans-serif; /* Changed font */
+    font-size: 2.8rem; /* Slightly smaller */
     margin-bottom: 1rem;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-family: 'Playfair Display', sans-serif; /* Changed font */
+    font-size: 1.2rem; /* Slightly smaller */
     margin-bottom: 2rem;
 }
 
 .button-container {
-    margin-top: 20px;
-    text-align: center;
+    margin-top: 20px; /* Space between text and buttons */
+    text-align: center; /* Center the buttons horizontally */
 }
 
 .cta-button {
@@ -292,11 +296,11 @@ footer a {
     }
 
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem; /* Adjusted for smaller screens */
     }
 
     .hero-content p {
-        font-size: 1.2rem;
+        font-size: 1rem; /* Adjusted for smaller screens */
     }
 
     .logo {
