@@ -112,11 +112,12 @@ nav a:hover {
     transition: all 0.3s ease;
     margin: 0 10px;
     border-radius: 0; /* Remove any rounding for uniform shape */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
 }
 
 .oferta {
     background-color: #D9C0A9;
-    color: transparent; /* Text transparent to show background */
+    color: transparent; /* Text transparent to show background behind */
     border: 2px solid #D9C0A9;
 }
 
@@ -128,7 +129,7 @@ nav a:hover {
 
 .portfolio {
     background-color: transparent;
-    color: transparent; /* Text transparent to show background */
+    color: transparent; /* Text transparent to show background behind */
     border: 2px solid #fff;
 }
 
