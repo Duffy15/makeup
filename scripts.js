@@ -56,4 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.querySelectorAll('img').forEach(img => {
         img.addEventListener('click', (e) => e.stopPropagation());
     });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
 });
