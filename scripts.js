@@ -22,19 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Lightbox Gallery Functionality for Portfolio Page
-    const galleryImages = document.querySelectorAll('.gallery a img');
+    const galleryLinks = document.querySelectorAll('.gallery a');
     const lightbox = document.createElement('div');
     lightbox.classList.add('lightbox');
     document.body.appendChild(lightbox);
 
     let currentIndexLightbox = 0;
 
-    galleryImages.forEach((img, index) => {
-        img.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default link behavior
+    galleryLinks.forEach((link, index) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default navigation
             currentIndexLightbox = index;
-            const link = img.parentElement;
-            openLightbox(link.href, img.alt);
+            openLightbox(link.href, link.dataset.title || link.querySelector('img').alt);
         });
     });
 
@@ -56,17 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function prevImage() {
-        currentIndexLightbox = (currentIndexLightbox - 1 + galleryImages.length) % galleryImages.length;
-        const img = galleryImages[currentIndexLightbox];
-        const link = img.parentElement;
-        openLightbox(link.href, img.alt);
+        currentIndexLightbox = (currentIndexLightbox - 1 + galleryLinks.length) % galleryLinks.length;
+        const link = galleryLinks[currentIndexLightbox];
+        openLightbox(link.href, link.dataset.title || link.querySelector('img').alt);
     }
 
     function nextImage() {
-        currentIndexLightbox = (currentIndexLightbox + 1) % galleryImages.length;
-        const img = galleryImages[currentIndexLightbox];
-        const link = img.parentElement;
-        openLightbox(link.href, img.alt);
+        currentIndexLightbox = (currentIndexLightbox + 1) % galleryLinks.length;
+        const link = galleryLinks[currentIndexLightbox];
+        openLightbox(link.href, link.dataset.title || link.querySelector('img').alt);
     }
 
     // Close lightbox when clicking outside the image
