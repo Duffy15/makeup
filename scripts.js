@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
     // Lightbox Gallery Functionality for Portfolio Page
     const galleryLinks = document.querySelectorAll('.gallery a');
     console.log('Gallery links found:', galleryLinks); // Debug: Check if links are detected
