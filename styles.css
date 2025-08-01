@@ -185,7 +185,7 @@ nav a:hover {
 
 .card img {
     width: 300px; /* Fixed width for all images */
-    height: 200px; /* Fixed height for all images */
+    height: 500px; /* Fixed height for all images */
     object-fit: cover; /* Crop and fill the space without distortion */
     border-radius: 10px;
 }
