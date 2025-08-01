@@ -226,8 +226,8 @@ nav a:hover {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjusted to fit three 450px images */
+    gap: 1rem; /* Reduced gap to minimize space */
     margin-top: 2rem;
 }
 
@@ -237,10 +237,66 @@ nav a:hover {
     object-fit: cover; /* Crop and fill the space without distortion */
     border-radius: 10px;
     transition: transform 0.3s;
+    cursor: pointer; /* Indicate clickable */
 }
 
 .gallery a img:hover {
     transform: scale(1.05);
+}
+
+/* Custom Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    backdrop-filter: blur(10px); /* Frosted effect (supported in modern browsers) */
+    -webkit-backdrop-filter: blur(10px); /* Safari fallback */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Maintain aspect ratio without cropping */
+    border-radius: 10px;
+}
+
+.lightbox .prev, .lightbox .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: none;
+}
+
+.lightbox .prev {
+    left: 10px;
+}
+
+.lightbox .next {
+    right: 10px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border: none;
 }
 
 /* Contact Page */
@@ -294,6 +350,17 @@ footer a {
 }
 
 /* Responsive Design */
+@media (max-width: 1350px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Allow two columns on narrower screens */
+    }
+
+    .gallery a img {
+        width: 100%;
+        height: 500px; /* Adjusted height for smaller screens */
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
         height: 70vh;
@@ -336,8 +403,7 @@ footer a {
     }
 
     .gallery a img {
-        width: 100%; /* Full width on smaller screens */
-        height: 500px; /* Adjusted height for smaller screens */
+        height: 400px; /* Adjusted height for smaller screens */
     }
 
     .instagram-slider {
@@ -376,6 +442,6 @@ footer a {
     }
 
     .gallery a img {
-        height: 400px; /* Further adjusted height for very small screens */
+        height: 300px; /* Further adjusted height for very small screens */
     }
 }
