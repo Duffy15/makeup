@@ -12,7 +12,7 @@ body {
 
 /* Headings */
 h1, h2, h3 {
-    font-weight: 250;
+    font-weight: 700;
     color: #FFFFFF;
 }
 
@@ -88,15 +88,15 @@ nav a:hover {
 }
 
 .hero-content h1 {
-    font-family: 'Raleway', Sans-serif; /* Changed font */
+    font-family: 'Playfair Display', sans-serif; /* Changed font */
     font-size: 2.8rem; /* Slightly smaller */
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.5rem; /* Reduced from 1rem to decrease space */
 }
 
 .hero-content p {
-    font-family: 'Raleway', Sans-serif; /* Changed font */
+    font-family: 'Playfair Display', sans-serif; /* Changed font */
     font-size: 1.2rem; /* Slightly smaller */
-    margin-bottom: 2rem;
+    margin-bottom: 1rem; /* Reduced from 2rem to decrease space before buttons */
 }
 
 .button-container {
@@ -184,7 +184,9 @@ nav a:hover {
 }
 
 .card img {
-    width: 100%;
+    width: 300px; /* Fixed width for all images */
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover; /* Crop and fill the space without distortion */
     border-radius: 10px;
 }
 
@@ -326,6 +328,11 @@ footer a {
         grid-template-columns: 1fr;
     }
 
+    .card img {
+        width: 100%; /* Full width on smaller screens */
+        height: 150px; /* Adjusted height for smaller screens */
+    }
+
     .instagram-slider {
         max-width: 100%;
     }
@@ -355,5 +362,9 @@ footer a {
     .logo {
         height: 25px; /* Further reduced for very small screens */
         max-width: 120px;
+    }
+
+    .card img {
+        height: 120px; /* Further adjusted height for very small screens */
     }
 }
