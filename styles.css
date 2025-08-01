@@ -185,7 +185,7 @@ nav a:hover {
 
 .card img {
     width: 300px; /* Fixed width for all images */
-    height: 500px; /* Fixed height for all images */
+    height: 500px; /* Fixed height as requested */
     object-fit: cover; /* Crop and fill the space without distortion */
     border-radius: 10px;
 }
@@ -226,19 +226,74 @@ nav a:hover {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
 .gallery img {
-    width: 100%;
+    width: 450px; /* Fixed width for all images */
+    height: 600px; /* Fixed height as requested */
+    object-fit: cover; /* Crop and fill the space without distortion */
     border-radius: 10px;
+    cursor: pointer; /* Indicate clickable */
     transition: transform 0.3s;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.lightbox .prev, .lightbox .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: none;
+}
+
+.lightbox .prev {
+    left: 10px;
+}
+
+.lightbox .next {
+    right: 10px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border: none;
 }
 
 /* Contact Page */
@@ -330,7 +385,12 @@ footer a {
 
     .card img {
         width: 100%; /* Full width on smaller screens */
-        height: 150px; /* Adjusted height for smaller screens */
+        height: 400px; /* Adjusted height for smaller screens */
+    }
+
+    .gallery img {
+        width: 100%; /* Full width on smaller screens */
+        height: 500px; /* Adjusted height for smaller screens */
     }
 
     .instagram-slider {
@@ -365,6 +425,10 @@ footer a {
     }
 
     .card img {
-        height: 120px; /* Further adjusted height for very small screens */
+        height: 300px; /* Further adjusted height for very small screens */
+    }
+
+    .gallery img {
+        height: 400px; /* Further adjusted height for very small screens */
     }
 }
