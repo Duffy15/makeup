@@ -1,5 +1,5 @@
-// scripts.js
 document.addEventListener('DOMContentLoaded', () => {
+    // Slider Functionality
     const sliderContainer = document.querySelector('.slider-container');
     const slides = document.querySelectorAll('.slide');
     let currentIndex = 0;
@@ -20,30 +20,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const offset = -currentIndex * newSlideWidth;
         sliderContainer.style.transform = `translateX(${offset}px)`;
     });
-});
 
-// Lightbox gallery functionality for portfolio page
-document.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('.gallery img');
+    // Lightbox Gallery Functionality for Portfolio Page
+    const galleryImages = document.querySelectorAll('.gallery a img');
     const lightbox = document.createElement('div');
-    lightbox.id = 'lightbox';
+    lightbox.classList.add('lightbox');
     document.body.appendChild(lightbox);
 
-    let currentIndex = 0;
+    let currentIndexLightbox = 0;
 
-    images.forEach((img, index) => {
-        img.addEventListener('click', () => {
-            currentIndex = index;
-            openLightbox();
+    galleryImages.forEach((img, index) => {
+        img.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            currentIndexLightbox = index;
+            const link = img.parentElement;
+            openLightbox(link.href, img.alt);
         });
     });
 
-    function openLightbox() {
-        const img = images[currentIndex];
+    function openLightbox(src, alt) {
         lightbox.innerHTML = `
             <span class="close">&times;</span>
             <span class="prev">&lt;</span>
-            <img src="${img.src}" alt="${img.alt}">
+            <img src="${src}" alt="${alt}">
             <span class="next">&gt;</span>
         `;
         lightbox.style.display = 'flex';
@@ -57,13 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function prevImage() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        openLightbox();
+        currentIndexLightbox = (currentIndexLightbox - 1 + galleryImages.length) % galleryImages.length;
+        const img = galleryImages[currentIndexLightbox];
+        const link = img.parentElement;
+        openLightbox(link.href, img.alt);
     }
 
     function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        openLightbox();
+        currentIndexLightbox = (currentIndexLightbox + 1) % galleryImages.length;
+        const img = galleryImages[currentIndexLightbox];
+        const link = img.parentElement;
+        openLightbox(link.href, img.alt);
     }
 
     // Close lightbox when clicking outside the image
