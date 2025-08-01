@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lightbox Gallery Functionality for Portfolio Page
     const galleryLinks = document.querySelectorAll('.gallery a');
+    console.log('Gallery links found:', galleryLinks); // Debug: Check if links are detected
     const lightbox = document.createElement('div');
     lightbox.classList.add('lightbox');
     document.body.appendChild(lightbox);
@@ -31,13 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     galleryLinks.forEach((link, index) => {
         link.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default navigation
+            e.preventDefault(); // Block default navigation
+            console.log('Click detected on link:', link.href); // Debug: Confirm click event
             currentIndexLightbox = index;
             openLightbox(link.href, link.dataset.title || link.querySelector('img').alt);
         });
     });
 
     function openLightbox(src, alt) {
+        console.log('Opening lightbox with src:', src, 'alt:', alt); // Debug: Confirm lightbox trigger
         lightbox.innerHTML = `
             <span class="close">&times;</span>
             <span class="prev">&lt;</span>
